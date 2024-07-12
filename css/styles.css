@@ -393,8 +393,10 @@ img {
 
 /* RESPONSIVE */
 @media (width >= 768px) {
+    .title { font-size: 2.15rem; }
+
     /* SECTION BENEFITS */
-    .benefits__title { font-size: 1.8rem; }
+    .benefits__title { font-size: 1.65rem; }
 
     .benefits__list {
         flex-direction: row;
@@ -453,6 +455,21 @@ img {
 }
 
 @media (width >= 1024px) {
+    :root {
+        --padding-size: 5rem;
+    }
+
+    .title { font-size: 2.3rem; }
+
+    /* HERO */
+    .hero__content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 2.25rem;
+    }
+
+    .hero__buttons-container { gap: 3rem; }
+
     /* SECTION BENEFITS */
     .benefits {
         flex-direction: row;
@@ -460,6 +477,8 @@ img {
     }
 
     .benefits__texts { max-width: 500px; }
+    
+    .benefits__title { font-size: 1.8rem; }
 
     .benefits__item { gap: 2rem; }
 
