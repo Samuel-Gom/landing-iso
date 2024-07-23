@@ -115,6 +115,7 @@ img {
 
 /* HEADER */
 .header {
+    background-color: var(--color-one);
     background-image: linear-gradient(to right, var(--color-one) 13%, #405c9c00 100%), url("../assets/img/background-hero.webp");
     background-position: center;
     background-repeat: no-repeat;

@@ -8,9 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preload" href="./assets/img/background-hero.webp" as="image" type="image/webp">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="header">
+
+        <!-- HEADER - DATA -->
         <nav class="data">
             <div class="data__content container">
                 <div class="data__texts">
@@ -73,12 +77,16 @@
                 </div>
             </div>
         </nav>
+
+        <!-- HEADER - NAVBAR -->
         <nav class="navbar container">
             <a class="navbar__logo" href="#">
                 <img class="navbar__img" src="./assets/img/logo.png" alt="Logo ISO">
             </a>
             <a class="navbar__cta cta" href="https://wa.link/oiio1u" rel="noopener noreferrer" target="_blank">Asesoría Gratuita</a>
         </nav>
+
+        <!-- HEADER - HERO -->
         <section class="hero">
             <div class="hero__content container">
                 <div class="hero__texts">
@@ -103,8 +111,12 @@
                 </div>
             </div>
         </section>
+
     </header>
+
     <main>
+
+        <!-- SECTION BENEFITS -->
         <section class="benefits container">
             <div class="benefit">
                 <span class="benefit__number">1</span>
@@ -119,6 +131,8 @@
                 <p class="benefit__paragraph paragraph">Te brindamos los sellos oficiales de acreditación</p>
             </div>
         </section>
+
+        <!-- SECTION INFP -->
         <section class="info">
             <div class="info__content container">
                 <h2 class="info__title title">Tus clientes podrán validar tu <span class="resalt">Certificado</span> con un <span class="resalt">QR</span></h2>
@@ -127,6 +141,8 @@
                 </figure>
             </div>
         </section>
+
+        <!-- SECTION COMPANIES -->
         <section class="companies container">
             <h2 class="companies__title title">Acreditación <span class="resalt">INTERNACIONAL</span> o <span class="resalt">NACIONAL</span></h2>
             <div class="companies__group">
@@ -148,6 +164,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- SECTION ABOUT -->
         <section class="about">
             <div class="about__content container">
                 <div class="about__texts">
@@ -160,7 +178,7 @@
                                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
                               </div>
                               <p class="about__number">
-                                <span class="number">+51 989 765 4321</span>
+                                <span class="number">+51 921 789 745</span>
                                 <span class="text">Whatsapp</span>
                               </p>
                         </div>
@@ -172,6 +190,8 @@
                 </figure>
             </div>
         </section>
+
+        <!-- SECTION VIDEO -->
         <section class="video container">
             <div class="video__texts">
                 <p class="video__guide guide">¡No esperes más!</p>
@@ -188,6 +208,8 @@
                 </button>
             </div>
         </section>
+
+        <!-- SECTION PROMO -->
         <section class="promo">
             <div class="promo__content container">
                 <div class="promo__group-call">
@@ -203,6 +225,8 @@
                 <a class="promo__cta" href="https://wa.link/oiio1u" rel="noopener noreferrer" target="_blank">Agendar ahora</a>
             </div>
         </section>
+
+        <!-- SECTION FAQS -->
         <section class="faqs container">
             <figure class="faqs__figure">
                 <img class="img" src="./assets/img/quienes-somos.webp" alt="" loading="lazy">
@@ -233,7 +257,10 @@
                 </div>
             </div>
         </section>
+
     </main>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__content container">
             <div class="footer__texts">
@@ -283,10 +310,13 @@
         </div>
     </footer>
 
+    <!-- SCRIPT QUE ACTIVA EL VIDEO, FALTA CAMBIAR URL DEL VIDEO POR LA CORRESPONDIENTE -->
     <script>
+        // Obtenemos tanto el boton y el video
         const play = document.querySelector("#play");
         const video = document.querySelector("#video");
 
+        // Cuando pulsemos el boton
         play.addEventListener("click", function() {
             // Reproducimos el video
             video.play();
