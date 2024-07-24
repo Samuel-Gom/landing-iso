@@ -12,6 +12,8 @@
     --padding-size: 4rem;
 }
 
+html { scroll-behavior: smooth; }
+
 body { font-family: "Poppins", sans-serif; }
 
 a {
@@ -282,14 +284,8 @@ button {
 .hero__play {
     display: flex;
     align-items: center;
-    font-family: inherit;
-    font-size: inherit;
     font-weight: 600;
     color: var(--color-three);
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
 
     &:hover {
         text-decoration: underline;
