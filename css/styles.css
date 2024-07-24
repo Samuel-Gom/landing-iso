@@ -622,6 +622,8 @@ button {
 .certificates { padding-block: var(--padding-size); }
 
 .certificates__title {
+    max-width: 600px;
+    margin-inline: auto;
     margin-bottom: 2rem;
     color: var(--color-one);
     text-align: center;
@@ -665,13 +667,25 @@ button {
     }
 }
 
+.certificate--selected {
+    color: var(--color-three);
+    background-color: var(--color-four);
+}
+
 .certificate__icon {
     width: 80px;
+    color: #145bab;
+    transition: color .5s;
+
     svg {
         width: 100%;
         height: 100%;
     }
 }
+
+.certificate:hover .certificate__icon { color: var(--color-three); }
+
+.certificate--selected .certificate__icon { color: var(--color-three); }
 
 .certificate__texts { padding-inline: .5rem;}
 
@@ -738,6 +752,7 @@ button {
 .contact {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
     padding-block: var(--padding-size);
 }
@@ -755,7 +770,7 @@ button {
 .contact__group {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem 4rem;
+    gap: 1.5rem 4rem;
 }
 
 .contact__info {
@@ -763,7 +778,6 @@ button {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    width: 100%;
 }
 
 .contact__icon {
@@ -790,7 +804,7 @@ button {
     
 
     .number {
-        max-width: 250px;
+        max-width: 200px;
         font-weight: 700;
         font-size: 1rem;
         text-overflow: ellipsis;
@@ -804,6 +818,7 @@ button {
 }
 
 .form {
+    width: 100%;
     max-width: 400px;
     padding: 1.5rem;
     text-align: center;
@@ -815,7 +830,7 @@ button {
 
 .form__title{
     margin-bottom: 2rem;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-two);
 }
@@ -1067,7 +1082,17 @@ button {
 .footer__address { font-style: normal; }
 
 .footer__contact .footer__link svg,
-.footer__contact .footer__address svg { margin-right: 1ch; }
+.footer__contact .footer__address svg {
+    flex-shrink: 0;
+    margin-right: 1ch; 
+}
+
+.footer__link:last-child {
+    max-width: 290px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 .footer__developed {
     color: var(--color-three);
@@ -1087,6 +1112,25 @@ button {
     .benefit { justify-content: space-between; }
 
     .benefit__paragraph { text-align: left; }
+
+    /* SECTION CONTACT */
+    .contact__data {
+        .number {
+            max-width: 250px;
+        }
+    }
+
+    /* FOOTER */
+    .footer__link:last-child { max-width: 100%; }
+}
+
+@media (width >= 425px) {
+    /* SECTION CONTACT */
+    .contact__data {
+        .number {
+            max-width: 300px;
+        }
+    }
 }
 
 @media (width >= 500px) {
@@ -1104,6 +1148,13 @@ button {
     .certificates__move--left { left: -1rem; }
 
     .certificates__move--right { right: -1rem; }
+
+    /* SECTION CONTACT */
+    .contact__data {
+        .number {
+            max-width: 100%;
+        }
+    }
 }
 
 @media (width >= 632px) {
@@ -1146,6 +1197,12 @@ button {
 
     /* SECTION CERTIFICATES */
     .certificate { flex-basis: 400px; }
+
+    .certificates__move--left { left: -3rem; }
+
+    .certificates__move--right { right: -3rem; }
+
+    .certificates__figure { width: 100%; }
 
     /* SECTION PROMO */
     .promo__content {
@@ -1242,6 +1299,50 @@ button {
         order: -1;
         width: 50%;
     }
+
+    /* SECTION CERTIFICATES */
+    .certificates__title { margin-bottom: 3rem; }
+
+    .certificates__group {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 4rem;
+    }
+
+    .certificates__scroll-buttons {
+        width: auto;
+        overflow-x: unset;
+    }
+
+    .certificates__options {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .certificate {
+        flex-basis: auto;
+        max-width: 400px;
+    }
+
+    .certificate__paragraph { padding-inline: 1rem; }
+
+    .certificates__images {
+        order: -1;
+        flex-shrink: 0;
+    }
+
+    /* SECTION CONTACT */
+    .contact {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .contact__texts { max-width: 700px; }
+
+    .form { padding: 2rem; }
+
+    .form__title{ font-size: 1.5rem; }
 
     /* SECTION PROMO */
     .promo__content { gap: 3rem; }
