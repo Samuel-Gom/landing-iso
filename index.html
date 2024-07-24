@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preload" href="./assets/img/background-hero.webp" as="image" type="image/webp">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- HEADER -->
@@ -198,8 +199,11 @@
                 <h2 class="video__title title">Impulsa tu crecimiento con una <span class="resalt"> Certificación ISO</span></h2>
             </div>
             <div class="video__container">
-                <video id="video" class="video__player" src="" poster="./assets/img/poster-video.webp" type="video/mp4"></video>
-                <button id="play" class="video__btn">
+                <video id="video-html" class="video__player" poster="./assets/img/poster-video.webp" preload="metadata">
+                    <source src="./assets/video/video.webm" type="video/webm">
+                    <source src="./assets/video/video.mp4" type="video/mp4">
+                </video>
+                <button id="play" class="video__btn" title="Impulsa tu crecimiento con una Certificación ISO">
                     <div class="video__btn-border">
                         <div class="video__btn-background">
                             <svg class="video__btn-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/></svg>
@@ -570,7 +574,7 @@
     <script>
         // Obtenemos tanto el boton y el video
         const play = document.querySelector("#play");
-        const video = document.querySelector("#video");
+        const video = document.querySelector("#video-html");
 
         // Cuando pulsemos el boton
         play.addEventListener("click", function() {
